@@ -1,2 +1,2 @@
 # web-blueasy
-Верстка макета blueasy из рассылки htmlacademy
+Верстка psd макета blueasy из рассылки htmlacademy
