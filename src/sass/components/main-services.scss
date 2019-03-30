@@ -1,0 +1,63 @@
+.main-services {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+.services {
+  padding-top: 68px;
+}
+
+.services__title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 1px;
+    background-color: white;
+  }
+}
+
+.services__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 39px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.service {
+  width: 270px;
+  margin-bottom: 75px;
+  font-weight: 600;
+}
+
+.service__icon {
+  width: 48px;
+  height: 48px;
+}
+
+.service__icon--coffee {
+  width: 34px;
+  height: 48px;
+}
+
+.service__icon--serious {
+  width: 47px;
+  height: 45px;
+}
+
+.service__title {
+  margin: 7px 0 0;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.service__text {
+  margin: 7px 0 0;
+  font-size: 12px;
+}
