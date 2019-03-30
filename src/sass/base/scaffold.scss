@@ -1,9 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: $color-white;
+  background-color: $bg-backup;
   background-image: url('../img/bg-hero.jpg');
   background-repeat: no-repeat;
+  background-position: center top;
   color: $color-black;
   font-family: $font-std;
   font-size: 18px;
