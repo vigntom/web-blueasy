@@ -1,0 +1,24 @@
+.main-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 650px;
+}
+
+.main-hero__text {
+  margin: 0;
+  padding-bottom: 8px;
+  color: $color-white;
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 65px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main-hero__text-line {
+  display: inline-block;
+  margin: 6px 0;
+  padding: 0 15px;
+  background-color: rgba($color-secondary-dark, 0.85);
+}
