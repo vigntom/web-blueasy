@@ -10,6 +10,10 @@ const sass = require('gulp-sass')
 const plumber = require('gulp-plumber')
 const bs = require('browser-sync').create()
 const htmlmin = require('gulp-htmlmin')
+const imagemin = require('gulp-imagemin')
+const guetzli = require('imagemin-guetzli')
+const mozjpeg = require('imagemin-mozjpeg')
+const newer = require('gulp-newer')
 
 const config = {
   src: 'src',
@@ -54,10 +58,52 @@ const clean = gulp.parallel(
   'clean:js'
 )
 
-gulp.task('build:img', () => {
-  return gulp.src(config.path.images, { cwd: config.src })
-    .pipe(gulp.dest(config.dest))
-})
+// gulp.task('build:img', () => {
+//   return gulp.src(config.path.images, { cwd: config.src })
+//     .pipe(gulp.dest(config.dest))
+// })
+
+function optimizeSvgOrPng () {
+  return gulp.src('src/img/*.{svg,png}')
+    .pipe(newer('dist/img'))
+    .pipe(imagemin())
+    .pipe(gulp.dest('dist/img'))
+}
+
+function optimizeBgImg () {
+  return gulp.src('src/img/bg-*.jpg')
+    .pipe(newer('dist/img'))
+    .pipe(imagemin([mozjpeg({
+      quality: 70,
+      progressive: true
+    })]))
+    .pipe(gulp.dest('dist/img'))
+}
+
+function optimizePhoto () {
+  return gulp.src('src/img/photo-*.jpg')
+    .pipe(newer('dist/img'))
+    .pipe(imagemin([guetzli({
+      quality: 84
+    })]))
+    .pipe(gulp.dest('dist/img'))
+}
+
+function optimizeJPG () {
+  return gulp.src('src/img/!(bg|photo)*.jpg')
+    .pipe(newer('dist/img'))
+    .pipe(imagemin([mozjpeg({
+      quality: 84
+    })]))
+    .pipe(gulp.dest('dist/img'))
+}
+
+gulp.task('build:img', gulp.parallel(
+  optimizeSvgOrPng,
+  optimizeBgImg,
+  optimizePhoto,
+  optimizeJPG
+))
 
 gulp.task('build:fonts', () => {
   return gulp.src('fonts/*.*', { cwd: config.src })
