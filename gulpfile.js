@@ -14,6 +14,7 @@ const imagemin = require('gulp-imagemin')
 const guetzli = require('imagemin-guetzli')
 const mozjpeg = require('imagemin-mozjpeg')
 const newer = require('gulp-newer')
+const webp = require('gulp-webp')
 
 const config = {
   src: 'src',
@@ -70,6 +71,12 @@ function optimizeSvgOrPng () {
     .pipe(gulp.dest('dist/img'))
 }
 
+function png2webp () {
+  return gulp.src('src/img/*.png')
+    .pipe(webp({ lossless: true }))
+    .pipe(gulp.dest('dist/img'))
+}
+
 function optimizeBgImg () {
   return gulp.src('src/img/bg-*.jpg')
     .pipe(newer('dist/img'))
@@ -77,6 +84,12 @@ function optimizeBgImg () {
       quality: 70,
       progressive: true
     })]))
+    .pipe(gulp.dest('dist/img'))
+}
+
+function bg2webp () {
+  return gulp.src('src/img/bg-*.jpg')
+    .pipe(webp({ quality: 50 }))
     .pipe(gulp.dest('dist/img'))
 }
 
@@ -98,11 +111,20 @@ function optimizeJPG () {
     .pipe(gulp.dest('dist/img'))
 }
 
+function img2webp () {
+  return gulp.src('src/img/!(bg)*.jpg')
+    .pipe(webp({ quality: 75 }))
+    .pipe(gulp.dest('dist/img'))
+}
+
 gulp.task('build:img', gulp.parallel(
   optimizeSvgOrPng,
   optimizeBgImg,
   optimizePhoto,
-  optimizeJPG
+  optimizeJPG,
+  png2webp,
+  bg2webp,
+  img2webp
 ))
 
 gulp.task('build:fonts', () => {
