@@ -12,6 +12,10 @@ body {
   line-height: 1.5;
 }
 
+.webp body {
+  background-image: url('../img/bg-hero.webp');
+}
+
 img {
   max-width: 100%;
   height: auto;
