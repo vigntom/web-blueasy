@@ -7,21 +7,6 @@
   padding-top: 68px;
 }
 
-.services__title {
-  margin: 0;
-  font-size: 30px;
-  font-weight: 300;
-  text-transform: uppercase;
-
-  &::after {
-    content: "";
-    display: block;
-    width: 45px;
-    height: 1px;
-    background-color: white;
-  }
-}
-
 .services__list {
   display: flex;
   justify-content: space-between;
