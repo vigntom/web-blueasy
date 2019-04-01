@@ -1,3 +1,8 @@
+.section {
+  padding-top: 68px;
+  padding-bottom: 73px;
+}
+
 .section__title {
   margin: 0;
   font-size: 30px;
@@ -8,7 +13,7 @@
     content: "";
     display: block;
     width: 45px;
-    height: 1px;
+    height: 2px;
     background-color: white;
   }
 }

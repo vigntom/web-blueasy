@@ -3,10 +3,6 @@
   color: $color-white;
 }
 
-.services {
-  padding-top: 68px;
-}
-
 .services__list {
   display: flex;
   justify-content: space-between;
@@ -17,7 +13,6 @@
 
 .service {
   width: 270px;
-  margin-bottom: 75px;
   padding-top: 55px;
   font-weight: 600;
 }

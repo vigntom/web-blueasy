@@ -13,21 +13,21 @@
       </h1>
 
       <nav class="main-nav">
-        <ul class="site-nav">
-          <li class="site-nav__item">
-            <a class="site-nav__link is-active">Home</a>
+        <ul class="site-nav menu">
+          <li class="menu__item">
+            <a class="menu__link is-active">Home</a>
           </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Services</a>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Services</a>
           </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Features</a>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Features</a>
           </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Portfolio</a>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Portfolio</a>
           </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Contact</a>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Contact</a>
           </li>
         </ul>
       </nav>
@@ -86,29 +86,71 @@
       </div>
     </section>
 
-    <article id="portfolio" class="portfolio">
-      <header class="portfolio__header">
-        <h2 class="portfolio__title">Portfolio</h2>
+    <article class="portfolio section">
+      <div class="container">
+        <header class="portfolio__header">
+          <h2 class="portfolio__title section__title">Portfolio</h2>
 
-        <ul class="portfolio-nav">
-          <li class="nav-item"><a class="nav-link is-active">All</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Panoramas</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Portraits</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Macro</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Journal</a></li>
+          <ul class="portfolio__nav menu menu--dark">
+            <li class="menu__item"><a class="menu__link is-active">All</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Panoramas</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Portraits</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Macro</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Journal</a></li>
+          </ul>
+        </header>
+
+        <ul class="portfolio__list">
+          <li class="product product--lighter">
+            <picture>
+              <source srcset="img/photo-11.webp" type="image/webp"></source>
+              <img class="product__photo" src="img/photo-11.jpg" alt="Photo 1">
+            </picture>
+          </li>
+          <li class="product product--lighter">
+            <picture>
+              <source srcset="img/photo-12.webp" type="image/webp"></source>
+              <img class="product__photo" src="img/photo-12.jpg" alt="Photo 2">
+            </picture>
+          </li>
+          <li class="product product--lighter is-active">
+            <picture>
+              <source srcset="img/photo-13.webp" type="image/webp"></source>
+              <img class="product__photo" src="img/photo-13.jpg" alt="Photo 3">
+            </picture>
+          </li>
+          <li class="product product--lighter">
+            <picture>
+              <source srcset="img/photo-14.webp" type="image/webp"></source>
+              <img class="product__photo" src="img/photo-14.jpg" alt="Photo 4">
+            </picture>
+          </li>
+          <li class="product">
+            <picture>
+              <source srcset="img/photo-21.webp" type="image/webp"></source>
+              <img class="product__photo" src="img/photo-21.jpg" alt="Photo 5">
+            </picture>
+          </li>
+          <li class="product">
+            <picture>
+              <source srcset="img/photo-22.webp" type="image/webp"></source>
+              <img class="product__photo" src="img/photo-22.jpg" alt="Photo 6">
+            </picture>
+          </li>
+          <li class="product">
+            <picture>
+              <source srcset="img/photo-23.webp" type="image/webp"></source>
+              <img class="product__photo" src="img/photo-23.jpg" alt="Photo 7">
+            </picture>
+          </li>
+          <li class="product">
+            <picture>
+              <source srcset="img/photo-24.webp" type="image/webp"></source>
+              <img class="product__photo" src="img/photo-24.jpg" alt="Photo 8">
+            </picture>
+          </li>
         </ul>
-      </header>
-
-      <ul class="portfolio__list">
-        <li class="product"><img class="product__photo" src="img/photo1.jpg" alt="Photo 1"></li>
-        <li class="product"><img class="product__photo" src="img/photo2.jpg" alt="Photo 2"></li>
-        <li class="product is-active"><img class="product__photo" src="img/photo3.jpg" alt="Photo 3"></li>
-        <li class="product"><img class="product__photo" src="img/photo4.jpg" alt="Photo 4"></li>
-        <li class="product"><img class="product__photo" src="img/photo5.jpg" alt="Photo 5"></li>
-        <li class="product"><img class="product__photo" src="img/photo6.jpg" alt="Photo 6"></li>
-        <li class="product"><img class="product__photo" src="img/photo7.jpg" alt="Photo 7"></li>
-        <li class="product"><img class="product__photo" src="img/photo8.jpg" alt="Photo 8"></li>
-      </ul>
+      </div>
     </article>
 
     <section class="features" class="main-features">

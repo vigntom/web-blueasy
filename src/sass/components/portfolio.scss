@@ -1,0 +1,93 @@
+.portfolio {
+  padding-bottom: 50px;
+  background-color: $color-white;
+}
+
+.portfolio__title {
+  color: $color-secondary;
+
+  &::after {
+    background-color: $color-secondary;
+  }
+}
+
+.portfolio__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.portfolio__nav {
+  width: 570px;
+  padding-top: 14px;
+  color: black;
+
+  .menu__item:first-child {
+    margin-right: 28px;
+  }
+
+  .menu__link {
+    padding: 1px 17px 2px;
+  }
+}
+
+.portfolio__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  margin: 80px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product__photo {
+  display: block;
+  width: 270px;
+  height: 270px;
+  overflow: hidden;
+}
+
+.product {
+  margin-right: 30px;
+  margin-bottom: 30px;
+
+  &:nth-child(4n),
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.product--lighter {
+  opacity: 0.8;
+}
+
+.is-active {
+  &.product {
+    position: relative;
+    opacity: 1;
+
+    &::before {
+      content: "+";
+      position: absolute;
+      z-index: 11;
+      top: 74px;
+      left: 112px;
+      color: $color-white;
+      font-size: 72px;
+      font-weight: 300;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba($color-secondary-dark, 0.9);
+    }
+  }
+}
