@@ -60,34 +60,25 @@
 
 .product--lighter {
   opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
-.is-active {
-  &.product {
-    position: relative;
-    opacity: 1;
+.product__link {
+  display: block;
+  position: relative;
 
-    &::before {
-      content: "+";
-      position: absolute;
-      z-index: 11;
-      top: 74px;
-      left: 112px;
-      color: $color-white;
-      font-size: 72px;
-      font-weight: 300;
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      z-index: 10;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-color: rgba($color-secondary-dark, 0.9);
-    }
+  &:hover::before {
+    content: "";
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($color-secondary-dark, 0.9);
+    cursor: crosshair;
   }
 }
