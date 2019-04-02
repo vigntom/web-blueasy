@@ -1,0 +1,44 @@
+.main-default {
+  color: $color-white;
+}
+
+.main-default__grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-default__content {
+  width: 570px;
+}
+
+.main-default__title {
+  margin-bottom: 32px;
+}
+
+.main-default__text {
+  margin: 24px 0 0;
+  padding-right: 100px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.main-default__visit {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 9px 39px;
+  transition: background-color 0.3s ease-out;
+  border: 2px solid $color-secondary-dark;
+  color: $color-secondary-dark;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $color-primary;
+  }
+}
+
+.main-default__video {
+  margin-top: 12px;
+}
