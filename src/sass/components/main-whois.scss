@@ -1,0 +1,88 @@
+.main-whois {
+  position: relative;
+  min-height: 349px;
+  padding-top: 83px;
+  color: $color-white;
+  font-size: 14px;
+  line-height: 1.72;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+    background-image: url('../img/bg-whois.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+}
+
+.main-whois__features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 19px;
+}
+
+.main-whois__text {
+  width: 570px;
+  margin: 12px 0;
+}
+
+.main-whois__text--enlarged {
+  width: 571px;
+}
+
+.main-whois__social {
+  display: flex;
+  justify-content: flex-start;
+  margin: 21px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-whois__icon {
+  margin-top: 6px;
+}
+
+.main-whois__icon--twitter {
+  width: 28px;
+  height: auto;
+}
+
+.main-whois__icon--google-plus {
+  width: 28px;
+  height: auto;
+}
+
+.main-whois__icon--dribble {
+  width: 26px;
+  height: auto;
+}
+
+.main-whois__icon--coffee {
+  width: 31px;
+  height: auto;
+}
+
+.social__item {
+  margin-right: 20px;
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  transition: opacity 0.3s ease-out;
+  border: 2px solid $color-white;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

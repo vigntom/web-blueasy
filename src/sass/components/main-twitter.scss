@@ -1,0 +1,32 @@
+.main-twitter {
+  padding-bottom: 67px;
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+.main-twitter__title {
+  background-image: url('../img/social-twitter.svg');
+  background-repeat: no-repeat;
+  background-position: right -8px center;
+  background-size: 43px auto;
+}
+
+.main-twitter__twit {
+  margin: 25px 0 0;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.78;
+}
+
+.main-twitter__embed-link {
+  color: $color-white;
+  font-weight: 700;
+
+  &:hover {
+    border-bottom: 1px solid $color-white;
+  }
+
+  &:active {
+    color: white(0.8);
+  }
+}
