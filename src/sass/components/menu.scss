@@ -13,6 +13,7 @@
 .menu__link {
   display: inline-block;
   padding: 4px 17px;
+  transition: color 0.3s ease-out;
   border: 2px solid transparent;
   color: inherit;
   font-size: 14px;
