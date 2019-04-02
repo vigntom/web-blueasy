@@ -286,45 +286,49 @@
       </div>
     </section>
 
-    <section id="contact" class="main-contact">
-      <h2 class="main-contact__title">Contact</h2>
+    <section class="main-contact section">
+      <div class="container">
+        <h2 class="main-contact__title section__title">Contact</h2>
 
-      <form class="main-contact__form form" action="https://postman-echo.com/post" method="post">
-        <div class="form__row">
-          <p class="form__group">
-            <label class="form__label" for="contact-full-name">Full Name</label>
-            <input id="contact-full-name" class="form__control" type="text" name="full-name" required>
+        <form class="main-contact__form contact-form form" action="https://postman-echo.com/post" method="post">
+          <div class="contact-form__grid">
+            <div class="form__col">
+              <p class="form__group">
+                <label class="contact-form__label" for="contact-full-name">Full Name</label>
+                <input id="contact-full-name" class="contact-form__control" type="text" name="full-name" required>
+              </p>
+
+              <p class="form__group">
+                <label class="contact-form__label" for="contact-email">Email</label>
+                <input id="contact-email" class="contact-form__control" type="email" name="email" required>
+              </p>
+            </div>
+
+            <div class="form__col form__col--text">
+              <p class="contact-form__text">
+                Jujubes bear claw croissant wafer sweet lemon drops brownie chocolate bar.
+                Sweet lollipop halvah tootsie roll cake fruitcake.
+                Chocolate cake chocolate bar gingerbread lollipop tart.
+                Jujubes bear claw donut chupa chups.
+              </p>
+
+              <p class="contact-form__text">
+                Linda Newman
+                <br> W325 State Road 123
+                <br> Mondovi, WI(Wisconsin) 98746-54321
+                <br> (715) 946 - 1234
+              </p>
+            </div>
+          </div>
+
+          <p class="form__group contact-form__message">
+            <label class="contact-form__label" for="contact-message">Message</label>
+            <textarea id="contact-message" class="contact-form__control" name="message" cols="30" rows="20"></textarea>
           </p>
 
-          <p class="form__group">
-            Jujubes bear claw croissant wafer sweet lemon drops brownie chocolate bar.
-            Sweet lollipop halvah tootsie roll cake fruitcake.
-            Chocolate cake chocolate bar gingerbread lollipop tart.
-            Jujubes bear claw donut chupa chups.
-          </p>
-        </div>
-
-        <div class="form-row">
-          <p class="form__group">
-            <label class="form__label" for="contact-email">Email</label>
-            <input id="contact-email" class="form__control" type="email" name="email" required>
-          </p>
-
-          <p class="form__group">
-            Linda Newman
-            <br> W325 State Road 123
-            <br> Mondovi, WI(Wisconsin) 98746-54321
-            <br> (715) 946 - 1234
-          </p>
-        </div>
-
-        <p class="form__group">
-          <label class="form__label" for="contact-message">Message</label>
-          <textarea id="contact-message" class="form__control" name="message" cols="30" rows="20"></textarea>
-        </p>
-
-        <button class="form__submit btn" type="submit">Message</button>
-      </form>
+          <button class="contact-form__submit btn" type="submit">Message</button>
+        </form>
+      </div>
     </section>
   </main>
 
