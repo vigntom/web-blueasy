@@ -1,0 +1,41 @@
+.main-testimonials {
+  padding-bottom: 61px;
+  background-color: $color-white;
+  color: $color-secondary;
+}
+
+.main-testimonials__title {
+  &::after {
+    background-color: $color-secondary;
+  }
+}
+
+.comment {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -57px;
+    right: 0;
+    width: 32px;
+    height: 25px;
+    background-image: url("../img/icon-bitter-close-quote.svg");
+    background-repeat: no-repeat;
+    background-size: 32px 25px;
+  }
+}
+
+.comment__text {
+  margin: 23px 0 12px;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.79;
+}
+
+.comment__author {
+  color: $color-primary;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 3.57;
+}
