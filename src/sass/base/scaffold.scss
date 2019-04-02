@@ -1,4 +1,5 @@
 body {
+  min-width: 1210px;
   margin: 0;
   padding: 0;
   background-color: $bg-backup;
@@ -41,7 +42,6 @@ a {
 .container {
   width: 1170px;
   margin: 0 auto;
-  padding: 0 5px;
 }
 
 .blue {

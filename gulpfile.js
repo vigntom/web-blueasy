@@ -15,6 +15,7 @@ const guetzli = require('imagemin-guetzli')
 const mozjpeg = require('imagemin-mozjpeg')
 const newer = require('gulp-newer')
 const webp = require('gulp-webp')
+const modernizr = require('gulp-modernizr')
 
 const config = {
   src: 'src',
@@ -166,11 +167,24 @@ function buildHtml () {
 
 gulp.task('build:html', buildHtml)
 
-gulp.task('build:js', () => {
+function buildJS () {
   return gulp.src(config.path.js, { cwd: config.src })
     .pipe(babel())
     .pipe(gulp.dest('js', { cwd: config.dest }))
-})
+}
+
+function buildModernizr () {
+  const configModernizr = {
+    options: [],
+    tests: ['webp']
+  }
+
+  return gulp.src(config.path.js, { cwd: config.src })
+    .pipe(modernizr('modernizr-custom.js', configModernizr))
+    .pipe(gulp.dest('js', { cwd: config.dest }))
+}
+
+gulp.task('build:js', gulp.parallel(buildJS, buildModernizr))
 
 const build = gulp.parallel(
   'build:html',
