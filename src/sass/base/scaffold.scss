@@ -3,7 +3,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: $bg-backup;
-  background-image: url('../img/bg-hero.jpg');
   background-repeat: no-repeat;
   background-position: center top;
   color: $color-black;
@@ -11,6 +10,11 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
+}
+
+.no-js,
+.no-webp {
+  background-image: url('../img/bg-hero.jpg');
 }
 
 .webp body {

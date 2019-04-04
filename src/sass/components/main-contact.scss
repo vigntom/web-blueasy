@@ -13,10 +13,20 @@
     bottom: 0;
     left: 0;
     opacity: 0.35;
-    background-image: url("../img/bg-contact.jpg");
     background-repeat: no-repeat;
     background-position: center top;
   }
+}
+
+.no-js,
+.no-webp {
+  .main-contact::before {
+    background-image: url("../img/bg-contact.jpg");
+  }
+}
+
+.webp .main-contact::before {
+  background-image: url("../img/bg-contact.webp");
 }
 
 .contact-form {

@@ -14,51 +14,62 @@
 .service {
   width: 270px;
   padding-top: 55px;
+  background-repeat: no-repeat;
+  background-position: left top;
   font-weight: 600;
 }
 
 .service--coffee {
-  background-image: url("../img/icon-coffee.png");
-  background-repeat: no-repeat;
-  background-position: left top;
   background-size: 34px 48px;
 }
 
-.webp-lossless .service--coffee {
-  background-image: url("../img/icon-coffee.webp");
-}
-
 .service--instant {
-  background-image: url("../img/icon-instant.png");
-  background-repeat: no-repeat;
-  background-position: left top;
   background-size: 48px 48px;
-}
-
-.webp-lossless .service--instant {
-  background-image: url("../img/icon-instant.webp");
 }
 
 .service--serious {
-  background-image: url("../img/icon-serious.png");
-  background-repeat: no-repeat;
-  background-position: left top;
   background-size: 47px 45px;
 }
 
-.webp-lossless .service--serious {
-  background-image: url("../img/icon-serious.webp");
-}
-
 .service--frame {
-  background-image: url("../img/icon-frame.png");
-  background-repeat: no-repeat;
-  background-position: left top;
   background-size: 48px 48px;
 }
 
-.webp-lossless .service--frame {
-  background-image: url("../img/icon-frame.webp");
+.no-js,
+.no-webp-lossless {
+  .service--coffee {
+    background-image: url("../img/icon-coffee.png");
+  }
+
+  .service--instant {
+    background-image: url("../img/icon-instant.png");
+  }
+
+  .service--serious {
+    background-image: url("../img/icon-serious.png");
+  }
+
+  .service--frame {
+    background-image: url("../img/icon-frame.png");
+  }
+}
+
+.webp-lossless {
+  .service--coffee {
+    background-image: url("../img/icon-coffee.webp");
+  }
+
+  .service--instant {
+    background-image: url("../img/icon-instant.webp");
+  }
+
+  .service--serious {
+    background-image: url("../img/icon-serious.webp");
+  }
+
+  .service--frame {
+    background-image: url("../img/icon-frame.webp");
+  }
 }
 
 .service__title {

@@ -15,10 +15,20 @@
     bottom: 0;
     left: 0;
     opacity: 0.5;
-    background-image: url('../img/bg-whois.jpg');
     background-repeat: no-repeat;
     background-position: center top;
   }
+}
+
+.no-js,
+.no-webp {
+  .main-whois::before {
+    background-image: url('../img/bg-whois.jpg');
+  }
+}
+
+.webp .main-whois::before {
+  background-image: url('../img/bg-whois.webp');
 }
 
 .main-whois__features {
