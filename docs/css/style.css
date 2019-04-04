@@ -382,7 +382,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: #515f68;
-  background-image: url("../img/bg-hero.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   color: #000;
@@ -390,6 +389,11 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
+}
+
+.no-js,
+.no-webp {
+  background-image: url("../img/bg-hero.jpg");
 }
 
 .webp body {
@@ -648,47 +652,57 @@ a {
 .service {
   width: 270px;
   padding-top: 55px;
+  background-repeat: no-repeat;
+  background-position: left top;
   font-weight: 600;
 }
 
 .service--coffee {
-  background-image: url("../img/icon-coffee.png");
-  background-repeat: no-repeat;
-  background-position: left top;
   background-size: 34px 48px;
+}
+
+.service--instant {
+  background-size: 48px 48px;
+}
+
+.service--serious {
+  background-size: 47px 45px;
+}
+
+.service--frame {
+  background-size: 48px 48px;
+}
+
+.no-js .service--coffee,
+.no-webp-lossless .service--coffee {
+  background-image: url("../img/icon-coffee.png");
+}
+
+.no-js .service--instant,
+.no-webp-lossless .service--instant {
+  background-image: url("../img/icon-instant.png");
+}
+
+.no-js .service--serious,
+.no-webp-lossless .service--serious {
+  background-image: url("../img/icon-serious.png");
+}
+
+.no-js .service--frame,
+.no-webp-lossless .service--frame {
+  background-image: url("../img/icon-frame.png");
 }
 
 .webp-lossless .service--coffee {
   background-image: url("../img/icon-coffee.webp");
 }
 
-.service--instant {
-  background-image: url("../img/icon-instant.png");
-  background-repeat: no-repeat;
-  background-position: left top;
-  background-size: 48px 48px;
-}
-
 .webp-lossless .service--instant {
   background-image: url("../img/icon-instant.webp");
 }
 
-.service--serious {
-  background-image: url("../img/icon-serious.png");
-  background-repeat: no-repeat;
-  background-position: left top;
-  background-size: 47px 45px;
-}
-
 .webp-lossless .service--serious {
   background-image: url("../img/icon-serious.webp");
-}
-
-.service--frame {
-  background-image: url("../img/icon-frame.png");
-  background-repeat: no-repeat;
-  background-position: left top;
-  background-size: 48px 48px;
 }
 
 .webp-lossless .service--frame {
@@ -893,9 +907,17 @@ a {
   bottom: 0;
   left: 0;
   opacity: 0.5;
-  background-image: url("../img/bg-whois.jpg");
   background-repeat: no-repeat;
   background-position: center top;
+}
+
+.no-js .main-whois::before,
+.no-webp .main-whois::before {
+  background-image: url("../img/bg-whois.jpg");
+}
+
+.webp .main-whois::before {
+  background-image: url("../img/bg-whois.webp");
 }
 
 .main-whois__features {
@@ -1021,9 +1043,17 @@ a {
   bottom: 0;
   left: 0;
   opacity: 0.35;
-  background-image: url("../img/bg-contact.jpg");
   background-repeat: no-repeat;
   background-position: center top;
+}
+
+.no-js .main-contact::before,
+.no-webp .main-contact::before {
+  background-image: url("../img/bg-contact.jpg");
+}
+
+.webp .main-contact::before {
+  background-image: url("../img/bg-contact.webp");
 }
 
 .contact-form {
