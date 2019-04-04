@@ -184,7 +184,7 @@ function buildStyle (dest) {
     .pipe(postcss([ postcssImport, postcssPresetEnv ]))
     .pipe(gulp.dest(dest))
     .pipe(bs.stream())
-    .pipe(cssMinify())
+    .pipe(cssMinify({ comments: false }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(dest))
 }
