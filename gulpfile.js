@@ -322,6 +322,7 @@ const watch = gulp.parallel(
 )
 const dev = gulp.series(clean, build, serve, watch)
 
+exports.start = dev
 exports.build = build
 exports.clean = clean
 exports.default = dev
